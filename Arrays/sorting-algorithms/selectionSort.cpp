@@ -1,5 +1,5 @@
 //Sorting Algorithm
-//Selection Sort
+//1. Selection Sort
 //compares each element in each iteration with the value at minimum index position.
 //Slower and not suitable for larger array lists.
 #include<iostream>
