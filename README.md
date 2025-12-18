@@ -1,228 +1,114 @@
-# Data Structures & Algorithms using C++ 🚀
+# 📘 Data Structures & Algorithms (DSA) using C++ – Practice Repository
 
-This repository contains my learning and implementation of **Data Structures & Algorithms (DSA)** using **C++**.
+Hi 👋
 
-I have started with **Arrays**, focusing on **Searching and Sorting algorithms**. Each algorithm is implemented in C++ and explained with **clear logic, pseudocode, and simple time complexity explanations** so that even beginners can understand *why* an algorithm is fast or slow.
+Welcome to my **Data Structures and Algorithms (DSA)** practice repository. This repository contains my implementations of fundamental DSA concepts, written for **learning, clarity, and strong conceptual understanding**. Each topic is implemented from scratch with a focus on how and *why* the algorithm works.
 
-This repository will be **continuously updated** as I move forward to advanced data structures like **Stacks, Queues, and Linked Lists**.
+This repository reflects my journey of building a solid foundation in DSA, which is essential for problem-solving, interviews, and core computer science understanding.
 
 ---
 
-## 📌 Topics Covered (So Far)
+## 🚀 Topics Covered
 
 ### 🔍 Searching Algorithms
 
-* Linear Search
-* Binary Search
+* **Linear Search**
+  Searches each element one by one until the target is found.
 
-### 🔃 Sorting Algorithms
-
-* Bubble Sort
-* Selection Sort
-* Insertion Sort
+* **Binary Search**
+  Efficient searching technique that works on sorted arrays by repeatedly dividing the search space into half.
 
 ---
 
-## ⏱ What is Time Complexity? (Big-O in Simple Words)
+### 🔄 Sorting Algorithms
 
-**Time Complexity** tells us **how the running time of an algorithm changes** as the input size (**n**) increases.
+* **Bubble Sort**
+  Compares adjacent elements and swaps them if they are in the wrong order.
 
-It does **not** measure time in seconds. Instead, it measures **how many operations** an algorithm performs.
+* **Selection Sort**
+  Selects the smallest element from the unsorted portion and places it at the correct position.
 
-### Common Big-O Notations Used Here
-
-* **O(1)** → Constant time (very fast, no dependency on input size)
-* **O(n)** → Linear time (time grows with input size)
-* **O(log n)** → Logarithmic time (input size reduces by half each step)
-* **O(n²)** → Quadratic time (nested loops, slow for large inputs)
+* **Insertion Sort**
+  Builds the sorted array one element at a time by inserting elements into their correct position.
 
 ---
 
-## 🔍 Searching Algorithms
+### 📚 Stack
 
-### 1️⃣ Linear Search
+* Implementation of **Stack** using arrays
+* Follows **LIFO (Last In, First Out)** principle
+* Operations implemented:
 
-**How it works:**
-Linear Search checks each element **one by one** until the target element is found or the array ends.
-
-**Time Complexity Explained:**
-
-* **Best Case: O(1)**
-  The element is found at the **first position**.
-
-* **Worst Case: O(n)**
-  The element is found at the **last position** or not present, so every element is checked.
-
-* **Average Case: O(n)**
-  On average, the element is found after checking about half the array.
-
-**When to use:**
-
-* Small datasets
-* Unsorted arrays
-
-**Pseudocode:**
-
-```
-LinearSearch(arr, n, key):
-    for i from 0 to n-1:
-        if arr[i] == key:
-            return i
-    return -1
-```
+  * Push
+  * Pop
+  * Peek
+  * isEmpty
+  * isFull
 
 ---
 
-### 2️⃣ Binary Search
+### 🚦 Queue
 
-**How it works:**
-Binary Search repeatedly divides a **sorted array** into halves and compares the middle element with the target.
+* **Linear Queue** implementation using arrays
+* **Circular Queue** implementation to overcome space wastage
+* Follows **FIFO (First In, First Out)** principle
+* Operations implemented:
 
-⚠️ **Important:** Array must be **sorted**.
-
-**Time Complexity Explained:**
-
-* **Best Case: O(1)**
-  The target element is found at the **middle** in the first comparison.
-
-* **Worst Case: O(log n)**
-  The array is divided into halves until one element remains.
-
-* **Average Case: O(log n)**
-  Most searches require multiple halving steps.
-
-**Why it is fast:**
-Each step eliminates **half of the remaining elements**.
-
-**Pseudocode:**
-
-```
-BinarySearch(arr, n, key):
-    low = 0
-    high = n - 1
-    while low <= high:
-        mid = (low + high) / 2
-        if arr[mid] == key:
-            return mid
-        else if key < arr[mid]:
-            high = mid - 1
-        else:
-            low = mid + 1
-    return -1
-```
+  * Enqueue
+  * Dequeue
+  * isEmpty
+  * isFull
+  * Display
 
 ---
 
-## 🔃 Sorting Algorithms
+### 🔗 Linked List
 
-### 3️⃣ Bubble Sort
+* **Singly Linked List** implementation
+* Node-based dynamic data structure
+* Operations implemented:
 
-**How it works:**
-Bubble Sort compares **adjacent elements** and swaps them if they are in the wrong order. After each pass, the **largest element bubbles to the end**.
-
-**Time Complexity Explained:**
-
-* **Best Case: O(n)**
-  The array is already sorted, so only one pass is needed.
-
-* **Worst Case: O(n²)**
-  The array is sorted in reverse order, requiring maximum swaps.
-
-* **Average Case: O(n²)**
-  Nested loops cause repeated comparisons.
-
-**Why it is slow:**
-Every element is compared multiple times.
-
-**Pseudocode:**
-
-```
-BubbleSort(arr, n):
-    for i from 0 to n-1:
-        for j from 0 to n-i-2:
-            if arr[j] > arr[j+1]:
-                swap(arr[j], arr[j+1])
-```
+  * Insertion
+  * Deletion
+  * Traversal
 
 ---
 
-### 4️⃣ Selection Sort
+## 🎯 Purpose of This Repository
 
-**How it works:**
-Selection Sort repeatedly finds the **minimum element** from the unsorted part and places it at the correct position.
-
-**Time Complexity Explained:**
-
-* **Best Case: O(n²)**
-* **Worst Case: O(n²)**
-* **Average Case: O(n²)**
-
-**Why all cases are O(n²):**
-The algorithm always scans the remaining array to find the minimum, regardless of order.
-
-**Pseudocode:**
-
-```
-SelectionSort(arr, n):
-    for i from 0 to n-1:
-        minIndex = i
-        for j from i+1 to n-1:
-            if arr[j] < arr[minIndex]:
-                minIndex = j
-        swap(arr[i], arr[minIndex])
-```
+* Strengthen DSA fundamentals
+* Understand internal working of data structures
+* Prepare for technical interviews
+* Improve problem-solving skills
+* Maintain clean and readable implementations
 
 ---
 
-### 5️⃣ Insertion Sort
-
-**How it works:**
-Insertion Sort builds the sorted array **one element at a time**, inserting each element into its correct position.
-
-**Time Complexity Explained:**
-
-* **Best Case: O(n)**
-  The array is already sorted, so only comparisons are needed.
-
-* **Worst Case: O(n²)**
-  The array is reverse sorted, causing maximum shifts.
-
-* **Average Case: O(n²)**
-
-**Why it is useful:**
-Very efficient for **small or nearly sorted arrays**.
-
-**Pseudocode:**
-
-```
-InsertionSort(arr, n):
-    for i from 1 to n-1:
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j+1] = arr[j]
-            j = j - 1
-        arr[j+1] = key
-```
-
----
-
-## 🛠 Language & Tools
+## 🛠️ Technologies Used
 
 * **Language:** C++
-* **Concepts Used:** Arrays, Loops, Functions, Conditional.
+* **Concepts:** Arrays, Pointers, Classes, Memory Management
 
 ---
 
-## 📈 Future Plans
+## 📌 Notes
 
-* Stack
-* Queue
-* Linked List
-* Recursion
-* Trees
-* Graphs
-* Dynamic Programming
+* All programs are implemented **without using STL** to ensure core understanding
+* Code is written in a beginner-friendly and well-structured manner
+* Suitable for students and beginners learning DSA
+
+---
+
+## 🤝 Contributions
+
+This is a personal learning repository, but suggestions and improvements are always welcome.
+
+---
+
+⭐ If you find this repository helpful, feel free to star it!
+
+Happy Coding! 💻✨
+
 
 ---
 
