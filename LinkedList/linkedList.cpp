@@ -127,6 +127,51 @@ class LinkedList {
 				}
 				cout<<"\n";
 			}
+		}
+		
+		void count()
+		{
+			if(head==NULL)
+			{
+				cout<<"\nLinkedList is Empty\n"<<endl; //list is empty hence nothing to count
+			}
+			
+			Node* temp=head; //assign heads address to temp pointer
+			int c = 0;
+			while(temp != NULL) //if temp is not the last node, keep traversing
+			{
+				c++; //keep increment count by 1
+				temp=temp->next;
+			}	
+			
+			cout<<"\nTotal Nodes in LinkedList are: "<<c<<endl;
+		}
+		
+		void Head()
+		{
+			if(head==NULL)
+			{
+				cout<<"\nLinkedList is Empty\n"<<endl;
+			}
+			
+			cout<<"The Node at the start of the LinkedList "<<head->data<<endl;
+		}
+		
+		void Tail()
+		{
+			
+			if(head==NULL)
+			{
+				cout<<"\nLinkedList is Empty\n"<<endl;
+			}
+			
+			Node* temp = head;
+			while(temp->next != NULL)
+			{
+				temp=temp->next;
+			}
+			
+			cout<<"\nThe Node at the end of the LinkedList is "<<temp->data<<endl;	
 		}		
 };
 
@@ -143,6 +188,9 @@ int main()
 	   cout<<"press 3 to delete first"<<endl;
 	   cout<<"press 4 to delete last"<<endl;	
 	   cout<<"press 5 to display"<<endl;
+	   cout<<"press 6 to count number of Nodes in list"<<endl;
+	   cout<<"press 7 to get the Node at the head of the list"<<endl;
+	   cout<<"press 8 to get Node at the end of the list"<<endl;
 	   cin>>option;
 	   
 	   switch(option)
@@ -183,6 +231,18 @@ int main()
 	   	   		
 	   	   	case 5:
 	   	   		ll.display();
+	   	   		break;
+	   	   		
+	   	   	case 6:
+	   	   		ll.count();
+	   	   		break;
+	   	   		
+	   	   	case 7:
+	   	   		ll.Head();
+	   	   		break;
+	   	   		
+	   	   	case 8:
+	   	   		ll.Tail();
 	   	   		break;
 	   	   		
 	   	   	case 0:
