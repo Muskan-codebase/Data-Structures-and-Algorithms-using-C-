@@ -69,7 +69,7 @@ class Queue {
 				cout<<"\nQueue is Empty!\n"<<endl;
 				return 0;
 				
-			} else if(head == 0 && rear == 0) //if rear and head are both at 0 index positon i.e. only one element
+			} else if(head == rear) //if rear and head are both at 0 index positon i.e. only one element
 			{
 				x = arr[head]; //remove the element
 				arr[head] = 0;
