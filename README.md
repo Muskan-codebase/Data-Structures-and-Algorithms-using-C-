@@ -160,7 +160,7 @@ This repository contains my practice and implementation of various **Data Struct
 ---
 
 ## Notes
-- This repository contains code examples for each of these topics in **C++/Java/Python**.  
+- This repository contains code examples for each of these topics in **C++**.  
 - Time complexities are explained to help understand **why algorithms behave as they do**.  
 - These problems are foundational for **coding interviews** and real-world problem-solving.  
 
