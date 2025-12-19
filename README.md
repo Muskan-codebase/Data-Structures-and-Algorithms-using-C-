@@ -88,7 +88,6 @@ This repository contains my practice and implementation of various **Data Struct
 - **Description:** Find pairs with sum = target.  
 - **Time Complexity:**  
   - **Brute Force O(n²):** Nested loops check all pairs.  
-  - **Optimized O(n):** Using hash map → single pass to check complements.  
 - **Reasoning:** Brute force examines every pair; hash map stores seen values.  
 
 ### 6. Rotate a Subarray
